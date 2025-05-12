@@ -21,9 +21,10 @@ shuffleBlocks(orderRange);
 
 blocks.forEach((block,index) => {
 block.style.order = orderRange[index];
-checkWin()
+
 block.addEventListener("click",function (){
     filp(block)
+    checkWin()
 })
 })
 // the shuffle function
