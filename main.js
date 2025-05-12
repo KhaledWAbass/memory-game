@@ -3,7 +3,7 @@ document.querySelector(".startGame span").onclick = function () {
     if (playerName !== null ){
         document.querySelector(".startGame").remove();
         document.querySelector(".walcom span").innerHTML = playerName.valueOf().toUpperCase();
-        sound()
+        BackgroundMusic()
 Timer()
     }
     if (playerName == "" ){
@@ -21,7 +21,7 @@ shuffleBlocks(orderRange);
 
 blocks.forEach((block,index) => {
 block.style.order = orderRange[index];
-
+checkWin()
 block.addEventListener("click",function (){
     filp(block)
 })
@@ -104,9 +104,27 @@ document.querySelector(".wrong").play();
         location.reload();
     }
 }
+// wingame function
+function WinGame(){
+    document.querySelector(".wrong").play();
+        let div = document.createElement("div");
+        div.className = "popup";
+        let span = document.createElement("span");
+        let spanText = document.createTextNode("congratulations, You Winner!");
+        span.appendChild(spanText);
+        div.appendChild(span); // Append the span to the div
+        let button = document.createElement("button");
+        let buttonText = document.createTextNode("Play Again");
+        button.appendChild(buttonText);
+        div.appendChild(button);
+        document.body.appendChild(div);
+        button.onclick = function () {
+            location.reload();
+        }
+    }
 
 // the sound functione 
-function sound() {
+function BackgroundMusic() {
     document.querySelector(".music").play()
     document.querySelector(".music").Volume = 0.5;
     document.querySelector(".music").loop = true;
@@ -141,6 +159,7 @@ function Timer() {
 // if the all blocks are matched
 function checkWin() {
     let allmuched = blocks.filter(block => block.classList.contains("matched"));
-    console.log(allmuched.length);
-    console.log(allmuched);
+    if (allmuched.length === blocks.length) {
+        WinGame()
+    }
 }
