@@ -1,178 +1,177 @@
 /* This CSS file is used to style the SVG elements in the HTML document */
 path {
-    fill: white !important;
-    stroke: white !important;
+  fill: white !important;
+  stroke: white !important;
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
-    position: relative;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
 }
 .info {
-    display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        border: 2px solid #00e2ff;
-        background-color: #eee;
-        color: #00BCD4;
-        font-size: 20px;
-        margin: 30px;
-        font-weight: bold;
-        overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 2px solid #00e2ff;
+  background-color: #eee;
+  color: #00bcd4;
+  font-size: 20px;
+  margin: 30px;
+  font-weight: bold;
+  overflow: hidden;
 }
 .container-img {
-    display: flex;
-    width: 1100px;
-    flex-wrap: wrap;
-    margin: 20px auto;
-    justify-content: center;
-justify-items: center;
+  display: flex;
+  width: 1100px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  justify-content: center;
+  justify-items: center;
 }
 .container-img .block {
-    height: 200px;
-    cursor: pointer;
-    transition: transform 0.5s ease;
-    position: relative;
-    flex: 1 0 200px;
-    margin: 0 10px 20px;
-    transform-style: preserve-3d;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  position: relative;
+  flex: 1 0 200px;
+  margin: 0 10px 20px;
+  transform-style: preserve-3d;
 }
 .container-img .block .font {
-    background-color: #333;
-    line-height: 200px;
+  background-color: #333;
+  line-height: 200px;
 }
 .container-img .block .back {
-transform: rotateY(180deg);
-    background-color: #374b53;
-    line-height: 210px;
+  transform: rotateY(180deg);
+  background-color: #374b53;
+  line-height: 210px;
 }
 .container-img .block .face {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    text-align: center;
-    border: 3px solid #00e2ff;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+  border: 3px solid #00e2ff;
+  border-radius: 10px;
 }
 .container-img .block .font::after {
-    content: "?";
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
+  content: "?";
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
 }
 .container-img .block.fliped {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .no-clicking {
-    pointer-events: none;
-    cursor: no-drop;
+  pointer-events: none;
+  cursor: no-drop;
 }
 .matched {
-    pointer-events: none;
-    cursor: no-drop;
-    transform: rotateY(180deg);
-
+  pointer-events: none;
+  cursor: no-drop;
+  transform: rotateY(180deg);
 }
- .startGame {
-position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: no-drop;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+.startGame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: no-drop;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .startGame span {
-    color: #00e2ff;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 20px;
-    border: 2px solid #00e2ff;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #333;
-} 
+  color: #00e2ff;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #00e2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
+}
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: no-drop;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: no-drop;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .popup span {
-    color: #00e2ff;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 20px;
-    border: 2px solid #00e2ff;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #333;
+  color: #00e2ff;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #00e2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
 }
 .popup h2 {
-    color: #00e2ff;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 20px;
-    border: 2px solid #00e2ff;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #333;
+  color: #00e2ff;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #00e2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
 }
 .popup button {
-    color: #00e2ff;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 20px;
-    border: 2px solid #00e2ff;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #333;
+  color: #00e2ff;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #00e2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
 }
 .popup button:hover {
-    background-color: #00e2ff;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #00e2ff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .dad {
-    color: #00BCD4;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px;
-    border: 2px solid #00e2ff;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #333;
-    margin: 20px;
-    text-align: center;
-    display: flex;
-justify-content: space-between;
-justify-items: center;
+  color: #00bcd4;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #00e2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
 }
 .dad .time {
-    display: flex;
+  display: flex;
 }
